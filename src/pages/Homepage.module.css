@@ -1,0 +1,44 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.page > div:first-child {
+    flex: 1;
+}
+  
+.page > div:last-child {
+    flex: 2;
+    text-align: center;
+}
+
+.name {
+    font-size: 70px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0rem;
+    font-size: 25px;
+}
+h3 {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 3rem;
+    font-size: 20px;
+}
+
+
+.link {
+    margin: 3rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #d3d3d3;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.link:hover {
+    background-color: rgb(72, 81, 89);
+}
