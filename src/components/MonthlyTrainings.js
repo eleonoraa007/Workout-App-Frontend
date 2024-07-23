@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import api from "../api/trainingApi";
 import styles from "./MonthlyTrainings.module.css";
+import { AuthContext } from "../context/AuthContext";
 
-const MonthlyTrainings = ({ userId }) => {
+const MonthlyTrainings = () => {
   const [trainings, setTrainings] = useState({});
   const [year, setYear] = useState(new Date().getFullYear());
   const [month, setMonth] = useState(new Date().getMonth() + 1);
+  const { userId } = useContext(AuthContext);
 
   const getMonthlyTrainings = () => {
     api

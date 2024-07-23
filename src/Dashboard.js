@@ -13,14 +13,8 @@ const Dashboard = () => {
       <Userpage />
       <Routes>
         <Route path="trainings" element={<TrainingList />} />
-        <Route
-          path="add-training"
-          element={<CreateTraining userId={userId} />}
-        />
-        <Route
-          path="monthly-trainings"
-          element={<MonthlyTrainings userId={userId} />}
-        />
+        <Route path="add-training" element={<CreateTraining />} />
+        <Route path="monthly-trainings" element={<MonthlyTrainings />} />
       </Routes>
     </div>
   );

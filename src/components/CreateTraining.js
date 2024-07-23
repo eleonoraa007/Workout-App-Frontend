@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import api from "../api/trainingApi";
 import styles from "./CreateTraining.module.css";
+import { AuthContext } from "../context/AuthContext";
 
-const CreateTraining = ({ userId }) => {
+const CreateTraining = () => {
+  const { userId } = useContext(AuthContext);
   const [formValues, setFormValues] = useState({
     date: "",
     type: "CARDIO",
